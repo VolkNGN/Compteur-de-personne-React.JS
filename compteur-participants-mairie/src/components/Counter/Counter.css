@@ -1,0 +1,27 @@
+/* Style de base pour le compteur */
+.counter {
+    margin: 20px 0;
+    font-size: 2em;
+    color: #555;
+  }
+  
+  /* Style pour le mode sombre */
+  .dark-mode .counter {
+    color: #f9f9f9;
+  }
+  
+  /* Media Queries pour ajuster le style en fonction de la taille de l'écran */
+  @media (max-width: 768px) {
+    .counter {
+      font-size: 1.5em;
+      margin: 15px 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .counter {
+      font-size: 1.2em;
+      margin: 10px 0;
+    }
+  }
+  

@@ -1,0 +1,110 @@
+/* Style de base pour l'application */
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Style pour le mode sombre */
+.dark-mode {
+  background-color: #333;
+  color: #f9f9f9;
+  border-color: #555;
+}
+
+/* Style pour le titre */
+h1 {
+  color: #333;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+}
+
+/* Style pour le titre en mode sombre */
+.dark-mode h1 {
+  color: #f9f9f9;
+}
+
+/* Style pour les boutons */
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 1em;
+}
+
+/* Conteneur pour les boutons */
+.button-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Style pour les runners */
+.runners {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 2px dashed #007bff;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Mode sombre pour les runners */
+.dark-mode .runners {
+  border-color: #999;
+}
+
+/* Style pour l'historique */
+.history {
+  margin-top: 20px;
+  border: 2px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Mode sombre pour l'historique */
+.dark-mode .history {
+  border-color: #555;
+}
+
+/* Media Queries pour ajuster le style en fonction de la taille de l'écran */
+@media (max-width: 768px) {
+  .App {
+    max-width: 90%;
+    padding: 10px;
+  }
+
+  button {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .runners {
+    flex-direction: column;
+  }
+
+  .history {
+    max-width: 100%;
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5em;
+  }
+
+  button {
+    font-size: 0.8em;
+    padding: 10px;
+  }
+}
