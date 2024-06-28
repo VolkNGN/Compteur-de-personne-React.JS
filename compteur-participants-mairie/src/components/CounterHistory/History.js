@@ -8,10 +8,12 @@ const History = ({ history }) => {
 
   return (
     <div className="history">
-      <h2>Historique des réinitialisations</h2>
+      <h2>Historique des participants</h2>
       <ul>
-        {history.map((value, index) => (
-          <li key={index}>Compteur : {value}</li>
+        {history.map((entry, index) => (
+          <li key={index}>
+            Compteur : {entry.count}, Temps écoulé : {new Date(entry.time * 1000).toISOString().substr(11, 8)}
+          </li>
         ))}
       </ul>
     </div>

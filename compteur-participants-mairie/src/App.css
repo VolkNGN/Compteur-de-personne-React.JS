@@ -30,13 +30,6 @@ h1 {
   color: #f9f9f9;
 }
 
-/* Style pour les boutons */
-button {
-  margin: 5px;
-  padding: 10px 20px;
-  font-size: 1em;
-}
-
 /* Conteneur pour les boutons */
 .button-container {
   display: flex;
@@ -46,7 +39,7 @@ button {
 
 /* Style pour les runners */
 .runners {
-  margin-top: 20px;
+  margin: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,6 +69,18 @@ button {
   border-color: #555;
 }
 
+/* Style pour le chronomètre */
+.timer {
+  font-size: 1.5em;
+  margin-top: 20px;
+  color: #007bff;
+}
+
+/* Mode sombre pour le chronomètre */
+.dark-mode .timer {
+  color: #f9f9f9;
+}
+
 /* Media Queries pour ajuster le style en fonction de la taille de l'écran */
 @media (max-width: 768px) {
   .App {
@@ -83,9 +88,8 @@ button {
     padding: 10px;
   }
 
-  button {
-    width: 100%;
-    margin: 5px 0;
+  .button-container {
+    flex-direction: column;
   }
 
   .runners {
@@ -103,8 +107,16 @@ button {
     font-size: 1.5em;
   }
 
-  button {
-    font-size: 0.8em;
-    padding: 10px;
+  .button-container {
+    flex-direction: column;
+  }
+
+  .runners {
+    flex-direction: column;
+  }
+
+  .history {
+    max-width: 100%;
+    margin: 20px auto;
   }
 }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './App.css'; // Import des styles globaux
 import Counter from './components/Counter/Counter'; // Import du composant Counter
 import Button from './components/Button/Button'; // Import du composant Button
@@ -15,6 +15,9 @@ const App = () => {
   const [counterHistory, setCounterHistory] = useState([]); // Historique des changements de compteur
   const [resetHistory, setResetHistory] = useState([]); // Historique des réinitialisations de compteur
   const [isDarkMode, setIsDarkMode] = useState(false); // État pour le mode sombre
+  const [isRunning, setIsRunning] = useState(false); // État pour le chronomètre en cours
+  const [elapsedTime, setElapsedTime] = useState(0); // Temps écoulé pour le chronomètre
+  const timerRef = useRef(null); // Référence pour le timer
 
   // Liste des emojis possibles pour les coureurs
   const emojis = ['🏃', '🏃‍♀️', '🏃‍♂️', '🏃', '🏃‍♀️', '🏃‍♂️', '🏃', '🏃‍♀️', '🏃‍♂️', '🍌'];
@@ -42,12 +45,38 @@ const App = () => {
     }
   };
 
-  // Fonction pour réinitialiser le compteur
+  // Fonction pour démarrer le chronomètre
+  const startTimer = () => {
+    if (!isRunning) {
+      setIsRunning(true);
+      timerRef.current = setInterval(() => {
+        setElapsedTime((prevTime) => prevTime + 1);
+      }, 1000);
+    }
+  };
+
+  // Fonction pour mettre le chronomètre en pause
+  const pauseTimer = () => {
+    if (isRunning) {
+      setIsRunning(false);
+      clearInterval(timerRef.current);
+    }
+  };
+
+  // Fonction pour arrêter et réinitialiser le chronomètre
+  const stopTimer = () => {
+    setIsRunning(false);
+    setElapsedTime(0);
+    clearInterval(timerRef.current);
+  };
+
+  // Fonction pour réinitialiser le compteur et inclure le temps écoulé dans l'historique
   const reset = () => {
-    setResetHistory([...resetHistory, count]); // Ajoute la valeur actuelle du compteur à l'historique des réinitialisations
+    setResetHistory([...resetHistory, { count, time: elapsedTime }]);
     setCount(0);
     setAlert('');
     setRunners([]);
+    
   };
 
   // Fonction pour vider l'historique des réinitialisations
@@ -62,7 +91,7 @@ const App = () => {
 
   // Effet pour ajouter des emojis coureurs lorsque le compteur atteint des multiples de 25
   useEffect(() => {
-    const newRunners = Math.floor(count / 25);
+    const newRunners = Math.floor(count / 5);
     if (newRunners > runners.length) {
       const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
       setRunners((prevRunners) => [...prevRunners, randomEmoji]);
@@ -80,15 +109,24 @@ const App = () => {
         <Button onClick={decrement} label="Décrémenter" />
         <Button onClick={reset} label="Réinitialiser" />
         <Button onClick={funAction} label="Bouton Rigolo" fun />
+        
       </div>
-      <ToggleButton toggleTheme={toggleTheme} isDarkMode={isDarkMode} /> {/* Bouton pour basculer entre les modes */}
+      
       <div className="runners">
         {runners.map((runner, index) => (
           <Runner key={index} emoji={runner} /> /* Affiche les emojis coureurs */
         ))}
       </div>
+        <Button onClick={startTimer} label="▶️ Démarrer" type="start" /> {/* Bouton pour démarrer le chronomètre */}
+        <Button onClick={pauseTimer} label="⏸ Pause" type="pause" /> {/* Bouton pour mettre en pause le chronomètre */}
+        <Button onClick={stopTimer} label="⏹ Arrêter" type="stop" /> {/* Bouton pour arrêter et réinitialiser le chronomètre */}
+      <div className="timer">
+        {/* Affiche le temps écoulé */}
+        Temps écoulé: {new Date(elapsedTime * 1000).toISOString().substr(11, 8)}
+      </div>
       <History history={resetHistory} /> {/* Affiche l'historique des réinitialisations */}
       <Button onClick={clearHistory} label="Vider l'historique" /> {/* Bouton pour vider l'historique */}
+      <ToggleButton toggleTheme={toggleTheme} isDarkMode={isDarkMode} /> {/* Bouton pour basculer entre les modes */}
     </div>
   );
 };
