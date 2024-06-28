@@ -113,8 +113,8 @@ const App = ({ toggleDarkMode, isDarkMode }) => {
   return (
     // Ajoute la classe dark-mode si isDarkMode est vrai
     <div className={`App ${isDarkMode ? 'dark-mode' : ''}`}>
-      <div className="header-container explodable">
-        <h1>Compteur de Participants</h1>
+      <div className="header-container">
+        <h1 className="explodable">Compteur de Participants</h1>
         <InstructionsToggle /> {/* Toggle pour afficher les instructions */}
       </div>
       <Counter count={count} className="explodable" /> {/* Affiche le compteur */}
