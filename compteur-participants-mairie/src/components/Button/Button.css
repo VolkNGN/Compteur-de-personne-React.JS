@@ -1,54 +1,53 @@
 /* Style de base pour les boutons */
 .button {
-    margin: 5px;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: white;
-    transition: background-color 0.3s ease;
-  }
-  
-  /* Style pour le mode sombre */
-  .dark-mode .button {
-    background-color: #555;
-    color: #f9f9f9;
-  }
-  
-  /* Style pour le hover des boutons */
-  .button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Style pour le hover en mode sombre */
-  .dark-mode .button:hover {
-    background-color: #333;
-  }
-  
-  /* Style pour le bouton rigolo */
-  .fun-button {
-    background-color: #ff69b4;
-    color: white;
-    position: relative;
-    overflow: hidden;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  /* Style pour le bouton rigolo en mode sombre */
-  .dark-mode .fun-button {
-    background-color: #b30059;
-  }
-  
-  /* Style pour le hover du bouton rigolo */
-  .fun-button:hover {
-    background-color: #ff1493;
-    transform: rotate(10deg) scale(1.1);
-  }
-  
-  /* Style pour le hover du bouton rigolo en mode sombre */
-  .dark-mode .fun-button:hover {
-    background-color: #800040;
-  }
-  
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+/* Style pour le mode sombre */
+.dark-mode .button {
+  background-color: #555;
+  color: #f9f9f9;
+}
+
+/* Style pour le hover des boutons */
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* Style pour le hover en mode sombre */
+.dark-mode .button:hover {
+  background-color: #333;
+}
+
+/* Style pour le bouton rigolo */
+.fun-button {
+  background-color: #ff69b4;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Style pour le bouton rigolo en mode sombre */
+.dark-mode .fun-button {
+  background-color: #b30059;
+}
+
+/* Style pour le hover du bouton rigolo */
+.fun-button:hover {
+  background-color: #ff1493;
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* Style pour le hover du bouton rigolo en mode sombre */
+.dark-mode .fun-button:hover {
+  background-color: #800040;
+}

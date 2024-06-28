@@ -1,5 +1,5 @@
 import React from 'react';
-import './Runner.css';
+import './Runner.css'; // Import des styles pour Runner
 
 const Runner = ({ emoji }) => {
   return (

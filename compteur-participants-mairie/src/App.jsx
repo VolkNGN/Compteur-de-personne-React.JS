@@ -50,6 +50,11 @@ const App = () => {
     setRunners([]);
   };
 
+  // Fonction pour vider l'historique des réinitialisations
+  const clearHistory = () => {
+    setResetHistory([]); // Vider l'historique des réinitialisations
+  };
+
   // Fonction pour le bouton rigolo
   const funAction = () => {
     setAlert('🎉 Vous avez appuyé sur le bouton rigolo ! 🎉');
@@ -83,6 +88,7 @@ const App = () => {
         ))}
       </div>
       <History history={resetHistory} /> {/* Affiche l'historique des réinitialisations */}
+      <Button onClick={clearHistory} label="Vider l'historique" /> {/* Bouton pour vider l'historique */}
     </div>
   );
 };

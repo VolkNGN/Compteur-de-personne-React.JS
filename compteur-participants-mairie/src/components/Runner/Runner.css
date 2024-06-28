@@ -1,25 +1,24 @@
 .runner {
-    display: inline-block;
-    margin: 0 5px;
-    font-size: 2em;
-    animation: run 2s linear infinite, fadeIn 0.5s ease-in-out;
+  display: inline-block;
+  margin: 0 5px;
+  font-size: 2em;
+  animation: run 2s linear infinite, fadeIn 0.5s ease-in-out;
+}
+
+@keyframes run {
+  0% {
+    transform: translateX(0);
   }
-  
-  @keyframes run {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(80px); /* Limiter la distance de l'animation */
-    }
+  100% {
+    transform: translateX(80px); /* Limiter la distance de l'animation */
   }
-  
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-  
+  100% {
+    opacity: 1;
+  }
+}

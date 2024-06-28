@@ -1,5 +1,5 @@
 import React from 'react';
-import './History.css';
+import './History.css'; // Import des styles pour History
 
 const History = ({ history }) => {
   if (!history || !Array.isArray(history) || history.length === 0) {

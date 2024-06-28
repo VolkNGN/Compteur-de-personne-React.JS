@@ -20,3 +20,9 @@
   padding: 5px 0;
   border-bottom: 1px solid #ccc;
 }
+
+/* Mode sombre pour l'historique */
+.dark-mode .history {
+  border-color: #555;
+  color: #f9f9f9;
+}
