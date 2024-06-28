@@ -11,7 +11,7 @@ const Instructions = () => {
         <li>Cliquez sur "Décrémenter" pour diminuer le nombre de participants si nécessaire.</li>
         <li>Cliquez sur "Réinitialiser" pour compter en petits groupes en fonction du timer.</li>
         <li>NE PAS CLIQUER SUR LE BOUTON RIGOLO !</li>
-        <li>Cliquez sur "Vider l'historique" pour supprimer toutes les réinitialisations enregistrées.</li>
+        <li>Cliquez sur "Vider l'historique" pour supprimer toutes les informations enregistrées.</li>
       </ul>
     </div>
   );
