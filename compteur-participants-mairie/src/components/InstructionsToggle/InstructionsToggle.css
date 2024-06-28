@@ -16,6 +16,10 @@
     margin-left: 10px;
   }
   
+  .toggle-button:hover {
+    background-color: #0056b3;
+  }  
+
   .instructions-wrapper {
     position: fixed;
     top: 20px;
