@@ -1,40 +1,39 @@
 .toggle-container {
-    display: inline-block;
-    position: relative;
-  }
-  
-  .toggle-checkbox {
-    display: none;
-  }
-  
-  .toggle-label {
-    width: 50px;
-    height: 25px;
-    background-color: #ccc;
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    position: relative;
-    transition: background-color 0.3s ease;
-  }
-  
-  .toggle-ball {
-    width: 23px;
-    height: 23px;
-    background-color: white;
-    border-radius: 50%;
-    position: absolute;
-    top: 1px;
-    left: 1px;
-    transition: transform 0.3s ease;
-  }
-  
-  .toggle-checkbox:checked + .toggle-label {
-    background-color: #007bff;
-  }
-  
-  .toggle-checkbox:checked + .toggle-label .toggle-ball {
-    transform: translateX(25px);
-  }
-  
+  display: inline-block;
+  position: relative;
+}
+
+.toggle-checkbox {
+  display: none;
+}
+
+.toggle-label {
+  width: 50px;
+  height: 25px;
+  background-color: #ccc;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-ball {
+  width: 23px;
+  height: 23px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  transition: transform 0.3s ease;
+}
+
+.toggle-checkbox:checked + .toggle-label {
+  background-color: #007bff;
+}
+
+.toggle-checkbox:checked + .toggle-label .toggle-ball {
+  transform: translateX(25px);
+}

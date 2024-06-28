@@ -1,5 +1,5 @@
 import React from 'react';
-import './ToggleButton.css';
+import './ToggleButton.css'; // Import des styles pour ToggleButton
 
 const ToggleButton = ({ toggleTheme, isDarkMode }) => {
   return (
