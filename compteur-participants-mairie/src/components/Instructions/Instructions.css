@@ -1,0 +1,37 @@
+.instructions {
+    margin: 20px 0;
+    padding: 10px;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: left;
+  }
+  
+  /* Mode sombre pour les instructions */
+  .dark-mode .instructions {
+    background-color: #444;
+    color: #f9f9f9;
+    border-color: #555;
+  }
+  
+  .instructions h2 {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+  }
+  
+  .dark-mode .instructions h2 {
+    color: #f9f9f9;
+    border-bottom-color: #555;
+  }
+  
+  .instructions ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .instructions li {
+    margin: 10px 0;
+  }
+  

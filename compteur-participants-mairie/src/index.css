@@ -1,13 +1,35 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(45deg, #f3ec78, #af4261); /* Dégradé simple */
+  background-size: 400% 400%; /* Taille de l'arrière-plan pour l'animation */
+  animation: gradientBG 15s ease infinite; /* Animation du dégradé */
+  transition: background-color 0.3s, color 0.3s; /* Transition pour les changements de mode */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Mode sombre */
+.dark-mode {
+  background: linear-gradient(45deg, #232526, #414345); /* Dégradé sombre */
+  background-size: 400% 400%; /* Taille de l'arrière-plan pour l'animation */
+  animation: gradientBG 15s ease infinite; /* Animation du dégradé */
+  color: #f9f9f9; /* Couleur du texte en mode sombre */
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Styles globaux */
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
 }

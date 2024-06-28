@@ -1,0 +1,41 @@
+.paypal-button-container {
+    text-align: center;
+    margin-top: 20px;
+    position: fixed; /* Fixe le bouton à un emplacement sur l'écran */
+    bottom: 20px; /* Positionnez le bouton en bas de l'écran */
+    right: 20px; /* Positionnez le bouton à droite de l'écran */
+    z-index: 1000; /* Assurez-vous que le bouton est au-dessus d'autres éléments */
+  }
+  
+  .paypal-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #0070ba;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .paypal-button:hover {
+    background-color: #005c99;
+  }
+  
+  .paypal-logo {
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  
+  /* Mode sombre pour le bouton PayPal */
+  .dark-mode .paypal-button {
+    background-color: #555;
+    color: #f9f9f9;
+  }
+  
+  .dark-mode .paypal-button:hover {
+    background-color: #333;
+  }
+  

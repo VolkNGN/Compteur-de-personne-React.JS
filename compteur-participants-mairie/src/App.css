@@ -18,11 +18,20 @@
   border-color: #555;
 }
 
+/* Conteneur pour le header */
+.header-container {
+  display: flex;
+  justify-content: center; /* Center elements horizontally */
+  align-items: center; /* Center elements vertically */
+  gap: 10px; /* Space between h1 and toggle button */
+}
+
 /* Style pour le titre */
 h1 {
   color: #333;
   border-bottom: 2px solid #007bff;
   padding-bottom: 10px;
+  margin: 0;
 }
 
 /* Style pour le titre en mode sombre */
@@ -39,7 +48,7 @@ h1 {
 
 /* Style pour les runners */
 .runners {
-  margin: 25px;
+  margin: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,4 +128,20 @@ h1 {
     max-width: 100%;
     margin: 20px auto;
   }
+}
+
+/* Styles d'explosion */
+@keyframes explode {
+  from {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  to {
+    transform: translate(var(--dx), var(--dy));
+    opacity: 0;
+  }
+}
+
+.explode {
+  animation: explode 1s ease-out forwards;
 }

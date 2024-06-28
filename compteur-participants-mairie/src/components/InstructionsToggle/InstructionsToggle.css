@@ -1,0 +1,48 @@
+.instructions-toggle {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .toggle-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .instructions-wrapper {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 300px; /* Ajustez la largeur selon vos besoins */
+  }
+  
+  .instructions {
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    color: #333;
+    text-align: left;
+  }
+  
+  /* Mode sombre pour le bouton et les instructions */
+  .dark-mode .toggle-button {
+    background-color: #555;
+    color: #f9f9f9;
+  }
+  
+  .dark-mode .instructions {
+    background-color: #444;
+    color: #f9f9f9;
+    border-color: #555;
+  }
+  
