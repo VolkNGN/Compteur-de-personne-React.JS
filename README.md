@@ -2,7 +2,7 @@
 
 ## Description
 
-Le **Compteur de Participants** est une application web interactive permettant de suivre et de gérer le nombre de participants à diverses activités telles que des matchs, festivals, votes, etc. L'application inclut des fonctionnalités avancées comme un mode sombre, un chronomètre intégré, et des animations amusantes. Elle est conçue pour être responsive et accessible, offrant une expérience utilisateur optimale sur tous les appareils.
+Le **Compteur de Participants** est une application web interactive permettant de suivre et de gérer le nombre de participants à diverses activitées telles que des matchs, festivals, votes, etc. L'application inclut des fonctionnalités avancées comme un mode sombre, un chronomètre intégré, et des animations amusantes. Elle est conçue pour être responsive et accessible, offrant une expérience utilisateur optimale sur tous les appareils.
 
 ## Fonctionnalités
 
