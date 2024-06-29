@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import './App.css'; // Import des styles globaux
 import Counter from './components/Counter/Counter'; // Import du composant Counter
 import Button from './components/Button/Button'; // Import du composant Button
@@ -19,8 +19,8 @@ const App = ({ toggleDarkMode, isDarkMode }) => {
   const [elapsedTime, setElapsedTime] = useState(0); // Temps écoulé pour le chronomètre
   const timerRef = useRef(null); // Référence pour le timer
 
-  // Liste des emojis possibles pour les coureurs
-  const emojis = ['🏃', '🏃‍♀️', '🏃‍♂️', '🏃', '🏃‍♀️', '🏃‍♂️', '🏃', '🏃‍♀️', '🏃‍♂️', '🍌'];
+  // Liste des emojis possibles pour les coureurs, mémorisée pour éviter les changements à chaque rendu
+  const emojis = useMemo(() => ['🏃', '🏃‍♀️', '🏃‍♂️', '🏃', '🏃‍♀️', '🏃‍♂️', '🏃', '🏃‍♀️', '🏃‍♂️', '🍌'], []);
 
   // Fonction pour basculer entre le mode sombre et le mode clair
   const toggleTheme = () => {
