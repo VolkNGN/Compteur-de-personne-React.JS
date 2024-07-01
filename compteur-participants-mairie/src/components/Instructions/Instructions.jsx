@@ -12,6 +12,7 @@ const Instructions = () => {
         <li>Cliquez sur "Réinitialiser" pour compter en petits groupes en fonction du timer.</li>
         <li>NE PAS CLIQUER SUR LE BOUTON RIGOLO ! (si c'est trop tard rafraichir la page)</li>
         <li>Cliquez sur "Vider l'historique" pour supprimer toutes les informations enregistrées.</li>
+        <li> Applaudissez très fort pour que Maëlie laisse un pourboire, à la fin de la présentation! </li>
       </ul>
     </div>
   );
