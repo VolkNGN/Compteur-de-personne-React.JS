@@ -1,0 +1,24 @@
+name: Snyk Security Scan
+
+on: [push]
+
+jobs:
+  snyk:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      - name: Install dependencies
+        run: npm install
+      - name: Run Snyk to check for vulnerabilities
+        run: npx snyk test
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+      - name: Run Snyk fix to apply fixes
+        run: npx snyk fix
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
