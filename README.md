@@ -1,97 +1,70 @@
-# Compteur de Participants
+# Getting Started with Create React App
 
-## Description
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Le **Compteur de Participants** est une application web interactive permettant de suivre et de gérer le nombre de participants à diverses activitées telles que des matchs, festivals, votes, etc. L'application inclut des fonctionnalités avancées comme un mode sombre, un chronomètre intégré, et des animations amusantes. Elle est conçue pour être responsive et accessible, offrant une expérience utilisateur optimale sur tous les appareils.
+## Available Scripts
 
-## Fonctionnalités
+In the project directory, you can run:
 
-- **Incrémentation et décrémentation** : Ajoutez ou retirez des participants facilement.
-- **Réinitialisation** : Réinitialisez le compteur tout en continuant le chronomètre.
-- **Chronomètre intégré** : Lancez, mettez en pause et arrêtez le chronomètre.
-- **Mode sombre** : Basculer entre les modes clair et sombre pour le confort visuel.
-- **Bouton rigolo** : Apportez une touche de fun avec une animation ?
-- **Historique des réinitialisations** : Gardez une trace des réinitialisations avec le temps écoulé.
-- **Instructions Toggle** : Accédez facilement aux instructions via un bouton "?".
-- **Responsive** : Adapté pour une utilisation sur tous types d'écrans.
+### `npm start`
 
-## Installation
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### Prérequis
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-- Node.js
-- npm ou yarn
+### `npm test`
 
-### Étapes d'installation
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-1. Clonez le dépôt :
-    ```sh
-    git clone https://github.com/votre-utilisateur/compteur-de-participants.git
-    ```
+### `npm run build`
 
-2. Installez les dépendances :
-    ```sh
-    cd compteur-de-participants
-    npm install
-    ```
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-3. Lancez l'application :
-    ```sh
-    npm start
-    ```
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## Utilisation
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### Compteur de Participants
+### `npm run eject`
 
-- **Incrémenter** : Cliquez sur le bouton "Incrémenter" pour ajouter un participant.
-- **Décrémenter** : Cliquez sur le bouton "Décrémenter" pour retirer un participant.
-- **Réinitialiser** : Cliquez sur "Réinitialiser" pour remettre le compteur à zéro.
-- **Démarrer le chronomètre** : Cliquez sur "▶️ Démarrer" pour lancer le chronomètre.
-- **Pause du chronomètre** : Cliquez sur "⏸ Pause" pour mettre en pause le chronomètre.
-- **Arrêter le chronomètre** : Cliquez sur "⏹ Arrêter" pour réinitialiser le chronomètre.
-- **Bouton rigolo** : Cliquez (ou pas) sur le bouton "Bouton Rigolo" pour une surprise.
-- **Basculer en mode sombre** : Utilisez le bouton de basculement pour changer de thème.
-- **Afficher les instructions** : Cliquez sur "?" pour afficher les instructions d'utilisation.
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-### Historique
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-L'historique des réinitialisations affiche les valeurs du compteur et le temps écoulé à chaque réinitialisation.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-## Structure du Projet
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-- `src/`
-  - `components/`
-    - `Alert/`: Composant d'alerte
-    - `Button/`: Composant de bouton
-    - `Counter/`: Composant de compteur
-    - `CounterHistory/`: Composant d'historique du compteur
-    - `Instructions/`: Composant des instructions
-    - `InstructionsToggle/`: Composant de basculement des instructions
-    - `Runner/`: Composant des emojis coureurs
-    - `ToggleButton/`: Composant de basculement du mode sombre
-  - `App.js`: Composant principal
-  - `App.css`: Styles globaux et animations 
+## Learn More
 
-## Contribution
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-Les contributions ne sont pas ouverte pour ce projet ! Merci de vouloir contribuer mais il s'agit d'un travail effectué dans le cadre d'un Brief effectué chez Simplon.co.
+To learn React, check out the [React documentation](https://reactjs.org/).
 
+### Code Splitting
 
-## Support
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-Si vous avez des questions ou des problèmes, veuillez ouvrir une issue sur GitHub.
+### Analyzing the Bundle Size
 
-## Licence
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de détails.
+### Making a Progressive Web App
 
-## Remerciements
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-Merci à tous ceux qui ont contribué à ce projet et à ceux qui le soutiennent via des donations sur PayPal.
+### Advanced Configuration
 
----
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-![PayPal Donate](https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_150x38.png)
-[Supportez-moi sur PayPal](https://paypal.me/VolkWebCo?country.x=FR&locale.x=fr_FR)
+### Deployment
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
